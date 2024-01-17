@@ -1,10 +1,13 @@
 import React from 'react'
 import {View, Text} from 'react-native'
+import DetailsFood from '../src/components/DetailsFood'
 
 const FoodScreen = () => {
     
   return (
-    <Text>Selected Food</Text>
+    <View>
+      <DetailsFood/>
+    </View>
   )
 }
 

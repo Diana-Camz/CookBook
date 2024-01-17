@@ -14,6 +14,7 @@ const MyStack = () => {
     return(
         <HomeNavigator.Navigator
             initialRouteName="Home"
+            screenOptions={{ title: 'Cook Book', headerShown: true, headerTitleAlign: 'center', headerTintColor: 'white',  headerShadowVisible: false, headerStyle: { backgroundColor: '#3E3E3E' } }}
         >
             <HomeNavigator.Screen
                 name="Home"
@@ -23,6 +24,10 @@ const MyStack = () => {
             <HomeNavigator.Screen
                 name="FoodScreen"
                 component={FoodScreen}
+                options={{
+                    headerShown: true,
+                    title: ' '
+                  }}
             />
         </HomeNavigator.Navigator>
     )
