@@ -1,19 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
-const Title = ({title}) => {
+const Title = ({title, margin}) => {
   return (
         <View style={styles.containerTitle}>
-            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.title} marginTop={margin}>{title}</Text>
         </View>
   )
 }
 
 const styles = StyleSheet.create({
     containerTitle: {
-        flex: 2,
         marginLeft: 10,
-        marginTop: 12,
+        marginVertical: 12,
         paddingTop: 10,
     },
     title: {
