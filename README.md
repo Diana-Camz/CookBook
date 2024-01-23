@@ -1,6 +1,7 @@
 # Cook Book
 
-App created with Expo, which shows a list of dishes that allow you to see their recipe
+App created with Expo, which shows a list of dishes that allow you to see their recipe.
+This is a team activity in the Bright Coders BootCamp, this time I wanted to do this activity on my own as a form of practice.
 
 ## Authors
 
