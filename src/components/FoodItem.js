@@ -15,7 +15,8 @@ const FoodItem = ({id, name, img, servings, recipe, width, height, fontSize, }) 
           name: name,
           img: img,
           servings: servings,
-          recipe: recipe
+          recipe: recipe,
+          width: width
         })}>
           <Image style={styles.img} source={{uri: img}} width={width} height={height}/>
         </TouchableOpacity>

@@ -2,21 +2,19 @@ import React from 'react'
 import {View, Text, StyleSheet, Image, FlatList} from 'react-native'
 import Icons from '../src/components/Icons'
 
-//Json Data
-//import data from '../src/data/data.json'
 
 
 const FoodScreen = ({route}) => {
-    const {id, name, img, servings, recipe} = route.params
+    const {id, name, img, servings, recipe, width} = route.params
   return (
     <View style={styles.container}>
       <View>
         <Image style={styles.img} source={{uri: img}}/>
-        <Text style={styles.title}>TRENDING</Text>
+        <Text style={styles.title}>{width.width === 100 ? 'TRENDING' : 'RECENT'}</Text>
         <Text style={styles.name}>{name}</Text>
       <Icons id={id}/>
       </View>
-      <View>
+      <View style={styles.container}>
         <Text style={styles.serving_txt}>{servings}</Text>
         <FlatList
         data={recipe}
@@ -24,8 +22,8 @@ const FoodScreen = ({route}) => {
         renderItem={({item : i}) => (
           <View >
             <View style={styles.container_details}>
-              <Text>{i.ingredient}</Text>
-              <Text>{i.amount}</Text>
+              <Text style={styles.details_txt}>{i.ingredient}</Text>
+              <Text style={styles.details_txt}>{i.amount}</Text>
             </View>
           </View>
       )}/>
@@ -59,12 +57,21 @@ const styles = StyleSheet.create({
   },
   serving_txt: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 16,
+    margin: 8,
+    marginLeft: 20,
+    marginBottom: 15,
   },
   container_details: {
     flexDirection: 'row', 
     justifyContent: 'space-between',
-    borderWidth: 2,
+    paddingVertical: 12,
+    marginHorizontal: 20,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#7F7F7F'
+  },
+  details_txt: {
+    color: 'white',
   }
 })
 export default FoodScreen
