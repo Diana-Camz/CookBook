@@ -25,7 +25,7 @@ const MyStack = () => {
                 name="FoodScreen"
                 component={FoodScreen}
                 options={{
-                    headerShown: true,
+                    headerShown: false,
                     cardStyle: {backgroundColor: 'transparent'},
                     title: ' '
                   }}

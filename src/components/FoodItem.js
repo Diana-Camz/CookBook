@@ -5,11 +5,18 @@ import { useNavigation } from '@react-navigation/native'
 
 
 
-const FoodItem = ({name, img, width, height, fontSize, id, txtWidth}) => {
+const FoodItem = ({id, name, img, servings, recipe, width, height, fontSize, }) => {
   const navigation = useNavigation()
   return (
       <View style={styles.containerItem}>
-        <TouchableOpacity key={id} onPress={() => navigation.navigate('FoodScreen')}>
+        
+        <TouchableOpacity key={id} onPress={() => navigation.navigate('FoodScreen', {
+          id: id,
+          name: name,
+          img: img,
+          servings: servings,
+          recipe: recipe
+        })}>
           <Image style={styles.img} source={{uri: img}} width={width} height={height}/>
         </TouchableOpacity>
         <Text style={[styles.titleFood, fontSize={fontSize}, width={width}]}>{name}</Text>

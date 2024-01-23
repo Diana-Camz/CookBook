@@ -2,13 +2,13 @@ import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 
 
-const DetailsFood = () => {
+const DetailsFood = (id, name) => {
   return (
     <View style={styles.container}>
       <View>
         <Image style={styles.img} source={{uri: "https://s3.abcstatics.com/media/gurme/2022/07/14/s/recetas-pasta-faciles-rapidas-0003-kgLH--940x529@abc.jpg"}}/>
-        <Text style={styles.title}>TRENDING</Text>
-        <Text style={styles.name}>Pesto Pasta</Text>
+        <Text style={styles.title}>{id}</Text>
+        <Text style={styles.name}>{name}</Text>
       </View>
       <View>
         <Text>Ingredients for 3 servings</Text>  
